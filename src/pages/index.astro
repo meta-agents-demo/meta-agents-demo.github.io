@@ -1,0 +1,114 @@
+---
+const pageTitle = 'Meta Agents Demo — Observable, evidence-backed agent coordination';
+const description = 'A provider-neutral Rust control plane for observable agent events, bounded state, and evidence-backed diagnostics.';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://meta-agents-demo.github.io/" />
+    <meta name="theme-color" content="#081019" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://meta-agents-demo.github.io/" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <a class="brand" href="/" aria-label="Meta Agents Demo home"><span class="orbit" aria-hidden="true"><i></i><b></b></span><span>Meta Agents <em>Demo</em></span></a>
+      <nav aria-label="Primary navigation"><a href="#diagnostics">Diagnostics</a><a href="#coordination">Coordination</a><a href="#operations">Operations</a><a class="nav-cta" href="https://github.com/meta-agents-demo/meta-agent-control-plane.rs">Control plane ↗</a></nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">PROVIDER-NEUTRAL / RUST CONTROL PLANE</p>
+          <h1>See the work.<br />Explain the stalls.<br /><em>Coordinate the next move.</em></h1>
+          <p class="lede">Observable agent events across HTTP, WebSocket, TCP, and UDP—with live dashboards, bounded state, and evidence-backed diagnostics.</p>
+          <div class="actions"><a class="button mint" href="https://github.com/meta-agents-demo/meta-agent-control-plane.rs">Open the canonical repo</a><a class="button ghost" href="#diagnostics">See the model</a></div>
+          <p class="privacy"><b>Privacy line:</b> records observable summaries, claims, evidence, confidence, and explicit reflections. It does not request, reconstruct, or expose hidden chain-of-thought.</p>
+        </div>
+
+        <div class="control-plane" aria-label="Illustrative live agent control plane">
+          <div class="cp-head"><span>CONTROL PLANE</span><b><i></i> INGEST LIVE</b></div>
+          <div class="agents">
+            <div class="agent active"><span class="provider blue">O</span><div><b>research-agent</b><small>collecting evidence</small></div><em>82%</em></div>
+            <div class="agent stalled"><span class="provider orange">A</span><div><b>build-agent</b><small>dependency missing</small></div><em>41%</em></div>
+            <div class="agent"><span class="provider green">G</span><div><b>review-agent</b><small>waiting on build</small></div><em>67%</em></div>
+          </div>
+          <div class="event-stream">
+            <div><span>18:11:02.041</span><b>claim</b><p>schema parity verified</p><i>evidence: 4</i></div>
+            <div class="warning"><span>18:11:04.519</span><b>stall</b><p>missing dependency: build</p><i>actionable</i></div>
+            <div><span>18:11:05.007</span><b>plan</b><p>advisory order recalculated</p><i>read-only</i></div>
+          </div>
+          <div class="cp-foot"><span>STATE 148 / 512</span><span>AUTH ON</span><span>UDP LOW-AUTHORITY</span></div>
+        </div>
+      </section>
+
+      <section class="protocol-strip"><span>HTTP</span><i></i><span>WEBSOCKET</span><i></i><span>TCP</span><i></i><span>UDP</span><b>ONE OBSERVABLE EVENT PROTOCOL</b></section>
+
+      <section class="diagnostics section" id="diagnostics">
+        <div class="section-heading"><p class="kicker">Explainable metacognition</p><h2>Turn “stuck” into a concrete diagnostic.</h2><p>The control plane evaluates explicit events and retained references, then reports the condition it can actually support.</p></div>
+        <div class="diagnostic-grid">
+          <article><span>STALL</span><h3>Missing next action</h3><p>A progress event ends without a concrete continuation.</p><b>event refs attached</b></article>
+          <article><span>RETRY</span><h3>Repeated attempt</h3><p>The same operation cycles without new evidence or changed inputs.</p><b>cycle count attached</b></article>
+          <article><span>DEPENDENCY</span><h3>Blocked edge</h3><p>A required result is absent, failed, or not yet trustworthy.</p><b>dependency path attached</b></article>
+          <article><span>CONFIDENCE</span><h3>Weak completion</h3><p>A completion claim lacks the configured confidence or supporting evidence.</p><b>threshold attached</b></article>
+          <article><span>CONTRADICTION</span><h3>State disagreement</h3><p>Completion and progress claims conflict inside the retained event window.</p><b>claims attached</b></article>
+          <article><span>CAPACITY</span><h3>State pressure</h3><p>LRU capacity and eviction visibility show what the control plane can no longer retain.</p><b>eviction refs attached</b></article>
+        </div>
+      </section>
+
+      <section class="coordination section" id="coordination">
+        <div class="coordination-copy">
+          <p class="kicker">Deterministic coordination</p>
+          <h2>A plan that respects dependencies—and knows it is advisory.</h2>
+          <p>Dependency-safe fair-share planning can recommend the next runnable work without dispatching it. The boundary stays explicit: this control plane observes and advises; an external executor decides whether to act.</p>
+          <div class="labels"><span>READ-ONLY PLAN</span><span>FAIR SHARE</span><span>DEPENDENCY SAFE</span></div>
+        </div>
+        <div class="plan-board" aria-label="Example dependency-safe advisory plan">
+          <div class="plan-head"><span>ADVISORY PLAN / 0041</span><span>NOT DISPATCHED</span></div>
+          <ol>
+            <li class="done"><span>01</span><b>collect-context</b><small>complete</small></li>
+            <li class="run"><span>02</span><b>verify-schema</b><small>runnable</small></li>
+            <li><span>03</span><b>build-clients</b><small>blocked by 02</small></li>
+            <li><span>04</span><b>certify-e2e</b><small>blocked by 03</small></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="providers section">
+        <div><p class="kicker">One protocol / any provider</p><h2>Keep orchestration evidence portable.</h2></div>
+        <p>OpenAI, Anthropic, Gemini, local models, and custom runtimes can report into the same bounded event vocabulary. The control plane reasons about observable claims and dependencies, not a provider’s private internals.</p>
+        <div class="provider-row" aria-label="Supported provider families"><span><i class="blue"></i>OpenAI</span><span><i class="orange"></i>Anthropic</span><span><i class="green"></i>Gemini</span><span><i class="gray"></i>Local</span><span><i class="purple"></i>Custom</span></div>
+      </section>
+
+      <section class="operations section" id="operations">
+        <div class="section-heading"><p class="kicker">Bounded operations</p><h2>Observable limits are part of the architecture.</h2><p>Remote access, low-authority datagrams, state capacity, and container privileges are surfaced as operating conditions—not hidden defaults.</p></div>
+        <div class="ops-grid">
+          <article><b>AUTH</b><span>Required off-loopback</span><p>Remote readers and writers cross an explicit authenticated boundary.</p></article>
+          <article><b>LRU</b><span>Capacity + eviction visible</span><p>Bounded memory reports when retained evidence leaves the working set.</p></article>
+          <article><b>UDP</b><span>Low-authority telemetry</span><p>Datagrams can inform observation but do not silently become trusted control.</p></article>
+          <article><b>OCI</b><span>Non-root · read-only</span><p>The container profile reduces write and privilege surface by default.</p></article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="orbit large" aria-hidden="true"><i></i><b></b></div>
+        <h2>Make agent work inspectable before you make it autonomous.</h2>
+        <a href="https://github.com/meta-agents-demo/meta-agent-control-plane.rs">Explore the Rust control plane <span aria-hidden="true">→</span></a>
+      </section>
+    </main>
+    <footer><a class="brand" href="/"><span class="orbit" aria-hidden="true"><i></i><b></b></span><span>Meta Agents <em>Demo</em></span></a><p>Observable summaries. Evidence-backed diagnostics. Explicit boundaries.</p><a href="https://github.com/meta-agents-demo">GitHub ↗</a></footer>
+  </body>
+</html>
+
+<style is:global>
+  :root{--navy:#081019;--panel:#0e1b27;--panel2:#132331;--ink:#edf7f5;--muted:#9eb4ba;--line:#233a49;--mint:#71e6c2;--blue:#6db5ff;--orange:#e16b38;--purple:#bca0ff;--yellow:#f1c766;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--navy);font-synthesis:none}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);background-image:linear-gradient(rgba(109,181,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(109,181,255,.035) 1px,transparent 1px);background-size:32px 32px}a{color:inherit}.skip-link{position:fixed;top:-4rem;left:1rem;background:var(--mint);color:var(--navy);padding:.8rem;z-index:99}.skip-link:focus{top:1rem}header,main,footer{width:min(1200px,calc(100% - 42px));margin-inline:auto}header{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;gap:.75rem;align-items:center;text-decoration:none;font-weight:900;letter-spacing:-.02em}.brand em{font-style:normal;color:var(--blue)}.orbit{position:relative;width:34px;height:34px;border:2px solid var(--blue);border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 6px rgba(109,181,255,.08)}.orbit i{position:absolute;width:16px;height:16px;border:1px solid var(--blue);border-radius:50%;left:7px;top:7px}.orbit b{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--orange);left:12px;top:12px;box-shadow:0 0 7px var(--orange)}nav{display:flex;align-items:center;gap:1.5rem;font-size:.75rem;font-weight:800}nav a{text-decoration:none}.nav-cta{border:1px solid var(--line);padding:.7rem .9rem}.hero{min-height:710px;display:grid;grid-template-columns:1fr .95fr;gap:7vw;align-items:center;padding:75px 0 95px}.eyebrow,.kicker{font:800 .65rem ui-monospace,SFMono-Regular,monospace;letter-spacing:.14em;color:var(--blue);text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1,h2{font-family:"Arial Narrow",Inter,sans-serif;text-transform:uppercase}h1{font-size:clamp(3.8rem,6.8vw,6.8rem);line-height:.86;letter-spacing:-.07em;margin:1.3rem 0 2rem}h1 em{font-style:normal;color:var(--mint)}h2{font-size:clamp(2.8rem,5.1vw,5.1rem);line-height:.91;letter-spacing:-.06em}.lede{font-size:1.12rem;line-height:1.7;color:var(--muted);max-width:650px}.actions{display:flex;gap:.7rem;flex-wrap:wrap;margin:2rem 0}.button{padding:.85rem 1rem;border:1px solid var(--line);text-decoration:none;font-size:.78rem;font-weight:900}.button.mint{background:var(--mint);color:var(--navy);border-color:var(--mint)}.button.ghost:hover{border-color:var(--blue)}.privacy{font-size:.72rem;line-height:1.55;color:var(--muted);border-left:2px solid var(--blue);padding-left:12px;max-width:600px}.privacy b{color:var(--blue)}.control-plane{background:#050b10;border:1px solid #2e4a5b;box-shadow:12px 12px 0 #142a3b;font:600 .64rem ui-monospace,monospace}.cp-head{padding:15px 17px;display:flex;justify-content:space-between;border-bottom:1px solid var(--line);letter-spacing:.1em}.cp-head b{color:var(--mint)}.cp-head i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 7px var(--mint);margin-right:6px}.agents{padding:12px 17px}.agent{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border-bottom:1px solid #17242d;padding:11px 0}.provider{width:28px;height:28px;border:1px solid;display:grid;place-items:center;border-radius:50%}.provider.blue{color:var(--blue)}.provider.orange{color:var(--orange)}.provider.green{color:var(--mint)}.agent div{display:flex;flex-direction:column;gap:.2rem}.agent small{color:#718791}.agent em{font-style:normal;color:#8fa4ad}.agent.stalled em{color:var(--yellow)}.event-stream{background:#0b151e;padding:6px 17px}.event-stream>div{display:grid;grid-template-columns:82px 45px 1fr auto;gap:8px;padding:10px 0;border-bottom:1px solid #1a2a35;align-items:center}.event-stream span,.event-stream i{color:#667d88;font-style:normal}.event-stream b{color:var(--blue)}.event-stream p{margin:0}.event-stream .warning b,.event-stream .warning i{color:var(--yellow)}.cp-foot{display:flex;justify-content:space-between;padding:14px 17px;color:#66808c}.protocol-strip{width:100%;background:var(--mint);color:var(--navy);padding:20px 28px;display:flex;align-items:center;gap:14px;font:900 .62rem ui-monospace,monospace;letter-spacing:.08em}.protocol-strip i{width:5px;height:5px;border-radius:50%;background:var(--navy)}.protocol-strip b{margin-left:auto}.section{padding:115px 0;border-bottom:1px solid var(--line)}.section-heading{display:grid;grid-template-columns:.35fr 1fr .65fr;gap:2.4rem;align-items:start;margin-bottom:55px}.section-heading h2{margin:0}.section-heading>p:last-child{color:var(--muted);line-height:1.7}.diagnostic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.diagnostic-grid article{min-height:220px;background:var(--panel);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column}.diagnostic-grid article>span{font:800 .58rem ui-monospace,monospace;color:var(--orange)}.diagnostic-grid h3{margin:2.5rem 0 .6rem;font-size:1rem}.diagnostic-grid p{color:var(--muted);font-size:.78rem;line-height:1.55}.diagnostic-grid article>b{margin-top:auto;color:var(--blue);font:700 .56rem ui-monospace,monospace}.coordination{display:grid;grid-template-columns:1fr .85fr;gap:7vw;align-items:center}.coordination-copy>p:not(.kicker){color:var(--muted);line-height:1.75}.labels{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:2rem}.labels span{border:1px solid var(--blue);color:var(--blue);font:800 .57rem ui-monospace,monospace;padding:.4rem .5rem}.plan-board{background:#ecf3f0;color:#12202a}.plan-head{display:flex;justify-content:space-between;background:#dce8e3;padding:14px 16px;font:800 .58rem ui-monospace,monospace}.plan-head span:last-child{color:#99502e}.plan-board ol{list-style:none;padding:0;margin:0}.plan-board li{display:grid;grid-template-columns:45px 1fr auto;gap:10px;padding:17px 16px;border-bottom:1px solid #c5d2cd;font:700 .66rem ui-monospace,monospace}.plan-board li span{color:#77847f}.plan-board li small{color:#7b8581}.plan-board li.done b{color:#367865}.plan-board li.run{background:#c7f1e3}.plan-board li.run small{color:#225f50}.providers{display:grid;grid-template-columns:1fr .7fr;gap:7vw;align-items:start}.providers>p{color:var(--muted);line-height:1.75}.provider-row{grid-column:1/-1;display:flex;flex-wrap:wrap;border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:30px}.provider-row span{flex:1 0 150px;padding:16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font:700 .67rem ui-monospace,monospace}.provider-row i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px}.provider-row i.blue{background:var(--blue)}.provider-row i.orange{background:var(--orange)}.provider-row i.green{background:var(--mint)}.provider-row i.gray{background:#8fa0a7}.provider-row i.purple{background:var(--purple)}.ops-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.ops-grid article{border-top:3px solid var(--mint);background:var(--panel);padding:22px;min-height:190px}.ops-grid article:nth-child(2){border-color:var(--blue)}.ops-grid article:nth-child(3){border-color:var(--orange)}.ops-grid article:nth-child(4){border-color:var(--purple)}.ops-grid b{font:900 .62rem ui-monospace,monospace;color:var(--mint)}.ops-grid span{display:block;margin:2rem 0 .6rem;font-size:.85rem;font-weight:800}.ops-grid p{font-size:.75rem;line-height:1.55;color:var(--muted)}.cta{margin:100px auto;background:var(--blue);color:var(--navy);padding:65px;display:grid;grid-template-columns:auto 1fr auto;gap:4vw;align-items:center}.orbit.large{width:68px;height:68px;border-color:var(--navy)}.orbit.large i{width:34px;height:34px;left:15px;top:15px;border-color:var(--navy)}.orbit.large b{width:10px;height:10px;left:27px;top:27px}.cta h2{font-size:clamp(2rem,3.8vw,3.8rem);margin:0}.cta a{font-weight:900;text-decoration:none;border-bottom:2px solid;padding-bottom:.3rem;white-space:nowrap}footer{padding:50px 0 65px;display:grid;grid-template-columns:1fr 1fr auto;gap:2rem;align-items:center;color:var(--muted);font-size:.76rem;border-top:1px solid var(--line)}footer p{margin:0}footer>a:last-child{font-weight:900;color:var(--blue)}
+  :focus-visible{outline:3px solid var(--mint);outline-offset:3px}@media(max-width:950px){.hero,.coordination{grid-template-columns:1fr}.control-plane{max-width:650px}.section-heading{grid-template-columns:1fr}.diagnostic-grid{grid-template-columns:repeat(2,1fr)}.providers{grid-template-columns:1fr}.ops-grid{grid-template-columns:repeat(2,1fr)}.cta{grid-template-columns:auto 1fr}.cta>a{grid-column:2}footer{grid-template-columns:1fr}}@media(max-width:640px){header{height:auto;padding:18px 0;align-items:flex-start}nav a:not(.nav-cta){display:none}.nav-cta{font-size:.62rem}h1{font-size:3.4rem}.hero{padding:55px 0}.control-plane{font-size:.56rem}.event-stream>div{grid-template-columns:70px 38px 1fr}.event-stream i{display:none}.protocol-strip{flex-wrap:wrap}.protocol-strip b{width:100%;margin:0}.section{padding:78px 0}.section-heading{gap:.8rem}.diagnostic-grid,.ops-grid{grid-template-columns:1fr}.providers{grid-template-columns:1fr}.cta{margin-block:70px;padding:35px 22px;grid-template-columns:1fr}.cta>a{grid-column:1}.orbit.large{display:none}header,main,footer{width:min(100% - 26px,1200px)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
